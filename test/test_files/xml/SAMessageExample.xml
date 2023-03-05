@@ -1,0 +1,90 @@
+<event_message alg_vers="2.1.0 2017-12-14" category="live" instance="dm@eew-bk-prod1" message_type="new" orig_sys="dm" ref_id="0" ref_src="" timestamp="2018-07-23T13:40:41.379Z" version="0">
+
+  <core_info id="2204">
+    <mag units="Mw">7.0004</mag>
+    <mag_uncer units="Mw">0.2396</mag_uncer>
+    <lat units="deg">33.9453</lat>
+    <lat_uncer units="deg">0.0582</lat_uncer>
+    <lon units="deg">-116.8245</lon>
+    <lon_uncer units="deg">0.0582</lon_uncer>
+    <depth units="km">8.5000</depth>
+    <depth_uncer units="km">3.5355</depth_uncer>
+    <orig_time units="UTC">2018-07-23T13:40:34.866Z</orig_time>
+    <orig_time_uncer units="sec">0.7254</orig_time_uncer>
+    <likelihood>0.9752</likelihood>
+    <num_stations>9</num_stations>
+  </core_info>
+
+  <contributors>
+    <contributor alg_instance="E2@eew-ci-prod1" alg_name="elarms" alg_version="3.0.14-2017-11-07" category="live" event_id="9140" version="1"/>
+    <contributor alg_instance="E2@eew-bk-prod1" alg_name="elarms" alg_version="3.0.14-2017-11-07" category="live" event_id="8580" version="1"/>
+    <contributor alg_instance="E2@eew-bk-prod2" alg_name="elarms" alg_version="3.0.14-2017-11-07" category="live" event_id="8394" version="1"/>
+    <contributor alg_instance="E2@eew-uw-prod2" alg_name="elarms" alg_version="3.0.14-2017-11-07" category="live" event_id="8685" version="1"/>
+    <contributor alg_instance="E2@eew-ci-prod2" alg_name="elarms" alg_version="3.0.14-2017-11-07" category="live" event_id="8780" version="1"/>
+    <contributor alg_instance="E2@eew-uw-prod1" alg_name="elarms" alg_version="3.0.14-2017-11-07" category="live" event_id="8743" version="1"/>
+    <contributor alg_instance="onsite@eew-bk-prod1/onsite.eew-bk-prod1" alg_name="onsite" alg_version="3.7.0 2017-01-26" category="live" event_id="1532353265" version="2"/>
+    <contributor alg_instance="onsite@eew-ci-prod1/onsite.eew-ci-prod1" alg_name="onsite" alg_version="3.7.0 2017-01-26" category="live" event_id="1532353265" version="1"/>
+    <contributor alg_instance="onsite@eew-ci-prod2/onsite.eew-ci-prod2" alg_name="onsite" alg_version="3.7.0 2017-01-26" category="live" event_id="1532353265" version="1"/>
+    <contributor alg_instance="onsite@eew-bk-prod2/onsite.eew-bk-prod2" alg_name="onsite" alg_version="3.7.0 2017-01-26" category="live" event_id="1532353265" version="2"/>
+    <contributor alg_instance="onsite@eew-uw-prod2/onsite.eew-uw-prod2" alg_name="onsite" alg_version="3.7.0 2017-01-26" category="live" event_id="1532353265" version="1"/>
+    <contributor alg_instance="onsite@eew-uw-prod1/onsite.eew-uw-prod1" alg_name="onsite" alg_version="3.7.0 2017-01-26" category="live" event_id="1532353265" version="2"/>
+  </contributors>
+
+  <gm_info>
+    <gmpoint_pred>
+      <pgv_pred number="5">
+        <pred>
+          <SNCL>CI.CZN.HNZ.--</SNCL>
+          <value units="cm/s">0.1826</value>
+          <value_uncer units="cm/s">0.3260</value_uncer>
+          <lat units="deg">33.9138</lat>
+          <lon units="deg">-116.7840</lon>
+          <app_rad units="km">10.0000</app_rad>
+          <time units="UTC">1970-01-01T00:00:00.000Z</time>
+          <time_uncer units="sec">0.0000</time_uncer>
+        </pred>
+        <pred>
+          <SNCL>CI.SNO.HHZ.--</SNCL>
+          <value units="cm/s">0.0844</value>
+          <value_uncer units="cm/s">0.3260</value_uncer>
+          <lat units="deg">34.0352</lat>
+          <lon units="deg">-116.8080</lon>
+          <app_rad units="km">10.0000</app_rad>
+          <time units="UTC">1970-01-01T00:00:00.000Z</time>
+          <time_uncer units="sec">0.0000</time_uncer>
+        </pred>
+        <pred>
+          <SNCL>NP.5442.HNZ.--</SNCL>
+          <value units="cm/s">0.0574</value>
+          <value_uncer units="cm/s">0.3260</value_uncer>
+          <lat units="deg">34.0490</lat>
+          <lon units="deg">-116.9400</lon>
+          <app_rad units="km">10.0000</app_rad>
+          <time units="UTC">1970-01-01T00:00:00.000Z</time>
+          <time_uncer units="sec">0.0000</time_uncer>
+        </pred>
+        <pred>
+          <SNCL>CI.DEV.HHZ.--</SNCL>
+          <value units="cm/s">0.0390</value>
+          <value_uncer units="cm/s">0.3260</value_uncer>
+          <lat units="deg">33.9360</lat>
+          <lon units="deg">-116.5780</lon>
+          <app_rad units="km">10.0000</app_rad>
+          <time units="UTC">1970-01-01T00:00:00.000Z</time>
+          <time_uncer units="sec">0.0000</time_uncer>
+        </pred>
+        <pred>
+          <SNCL>CI.BBS.HNZ.--</SNCL>
+          <value units="cm/s">0.0716</value>
+          <value_uncer units="cm/s">0.3260</value_uncer>
+          <lat units="deg">33.9214</lat>
+          <lon units="deg">-116.9810</lon>
+          <app_rad units="km">10.0000</app_rad>
+          <time units="UTC">1970-01-01T00:00:00.000Z</time>
+          <time_uncer units="sec">0.0000</time_uncer>
+        </pred>
+      </pgv_pred>
+    </gmpoint_pred>
+  </gm_info>
+
+</event_message>

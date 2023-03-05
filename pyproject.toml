@@ -1,0 +1,29 @@
+# pyproject.toml
+[project]
+name = "PostEventSummary"
+description = "Creates Post ShakeAlert Message Summary Reports in PDF and GeoJSON format."
+version = "0.2.7"
+requires-python = ">=3.6"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Private :: Do Not Upload"
+]
+
+[build-system]
+requires = ["setuptools>=45"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*.py"]
+
+[tool.pip]
+requirements = "requirements.txt"
+
+[tool.pytest.ini_options]
+minversion = "3.0"
+addopts = "-v"
+testpaths = [
+    "test",
+]

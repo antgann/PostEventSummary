@@ -1,0 +1,22 @@
+<event_message alg_vers="2.1.0 2017-12-14" category="live" instance="dm@eew-ci-prod2.gps.caltech.edu" message_type="new" orig_sys="dm" ref_id="0" ref_src="" timestamp="2018-08-29T02:33:32.625Z" version="0">
+
+  <core_info id="2633">
+    <mag units="Mw">4.5978</mag>
+    <mag_uncer units="Mw">0.3982</mag_uncer>
+    <lat units="deg">34.1292</lat>
+    <lat_uncer units="deg">0.1283</lat_uncer>
+    <lon units="deg">-117.8019</lon>
+    <lon_uncer units="deg">0.1283</lon_uncer>
+    <depth units="km">8.0000</depth>
+    <depth_uncer units="km">5.0000</depth_uncer>
+    <orig_time units="UTC">2018-08-29T02:33:27.970Z</orig_time>
+    <orig_time_uncer units="sec">2.5177</orig_time_uncer>
+    <likelihood>0.9091</likelihood>
+    <num_stations>4</num_stations>
+  </core_info>
+
+  <contributors>
+    <contributor alg_instance="E2@eew-bk-prod1" alg_name="elarms" alg_version="3.0.14-2017-11-07" category="live" event_id="9990" version="0"/>
+  </contributors>
+
+</event_message>

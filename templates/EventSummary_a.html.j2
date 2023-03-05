@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>%s</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.2/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.3.2/dist/leaflet.js"
+   integrity="sha512-2fA79E27MOeBgLjmBrtAgM/20clVSV8vJERaW/EcnnWCVGwQRazzKtQS1kIusCZv1PtaQxosDZZ0F1Oastl55w=="
+   crossorigin=""></script>
+ <style type="text/css">
+ #map { width: 400px; height: 600px; }
+ .tooltip {
+  all: revert;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: none;
+  border-color: none;
+  background: none;
+  box-shadow: none;
+  fillColor: none;
+  fillOpacity: 0;
+  border: none;
+  margin: 0px;
+  fill: false;
+
+ }
+ .info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+ </style>
+
+</head>
+<body>
+<div id='map' ></div>
+<script type=\"text/javascript\">
+    var map = L.map('map', {
+        center: [%s, %s],
+        zoom: %s,
+        zoomAnimation: false,
+    });
+
+    L.tileLayer(%s, {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+{% if drawANSSMarker %}
+    var starIcon = L.icon( {
+       iconSize:     [16, 16],
+       iconUrl: 'https://raw.githubusercontent.com/usgs/earthquake-eventpages/master/src/assets/star.png'});
+    L.marker([%s, %s], {icon: starIcon, title:'Earthquake Epicenter'}).addTo(map);
+{% endif %}
+
+    L.circleMarker([%s, %s], {radius: 10, color: 'black', fillColor: 'black', fillOpacity: 1, opacity: 1}).addTo(map);
+    L.control.scale({position: 'bottomright'}).addTo(map);
+
+{% for polygon in initial_octagon_coords %}
+    var polygon = L.polygon(%s, {color: '%s', weight: 7, fillColor: 'transparent'%s}).addTo(map);
+
+    var marker = new L.marker(L.latLng(polygon.getBounds().getSouth(), 0.5*(polygon.getBounds().getEast()+polygon.getBounds().getWest())), {opacity:0.01});
+
+    marker.bindTooltip("MMI %s", {direction: "bottom", permanent: true, sticky: false, className: "tooltip"}).addTo(map);
+
+{% endfor %}
